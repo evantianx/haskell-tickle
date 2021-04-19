@@ -1,1 +1,1 @@
-# haskell-tickle
+# haskell-tickling
