@@ -13,3 +13,7 @@ isPrime' :: Integral a => a -> Bool
 isPrime' 2 = True
 isPrime' p =
   p > 1 && (all (\n -> p `mod` n /= 0) $ takeWhile (\n -> n * n <= p) [3, 5..])
+
+-- Eratosthenes sieve
+sieve :: Integral a => [a] -> [a]
+sieve (p:xs) = p : sieve [x | x <- xs, x `mod` p /= 0]
